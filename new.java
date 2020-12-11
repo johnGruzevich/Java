@@ -25,19 +25,19 @@ class WriteThread extends Thread
 /*public*/ class Test {
  
 	public static void main(String[] args) throws Exception {
-		/*Console console = System.console();
+		Console console = System.console();
 		
 		String rootPath = console.readLine("Input rootPath: ");
-		
-		Integer depth = Integer.parseInt(console.readLine("\nInput depth: "));  
-		
-	
+			
+		Integer depth = Integer.parseInt(console.readLine("Input depth: "));  
+				
 		String mask = console.readLine("Input mask: ");
 		
-		*/
+		rootPath.replaceAll(Character.toString ((char)47) + Character.toString ((char)47),Character.toString ((char)47));
+		
 		try {	
 		
-			Main.listPath("C:\\Users", 5, "cs");
+			Main.listPath(rootPath, depth, mask);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
